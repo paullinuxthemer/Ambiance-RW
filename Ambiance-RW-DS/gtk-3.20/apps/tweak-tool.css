@@ -1,0 +1,43 @@
+/* redesign of the left-pane in tweak-tool*/
+
+.tweak-categories{
+ 
+  background-image: image(@base_color);}
+
+.tweak-category:not(:selected):not(:hover) {
+
+  background-image: image(@base_color);}
+
+.tweak-category:hover{
+background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (shade (@bg_color, 0.95), 0.94)),
+                                     to (shade (shade (@bg_color, 0.95), 0.86)));
+    color: @fg_color;
+    text-shadow: 0 1px shade (shade (@bg_color, 0.95), 0.96);}
+
+.tweak-category:hover:active {
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (shade (@selected_bg_color, 0.95), 0.90)),
+                                     to (shade (shade (@selected_bg_color, 0.95), 0.82)));
+
+    color: @selected_fg_color;
+    text-shadow: 0 -1px alpha (shade (@fg_color, 1.55), 0.5);
+}
+.tweak-category:selected {
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (shade (@selected_bg_color, 0.95), 1)),
+                                     to (shade (shade (@selected_bg_color, 0.95), 0.92)));
+    border-top-color: shade (shade (@bg_color, 0.95), 0.88);
+
+    color: @selected_fg_color;
+    text-shadow: 0 -1px alpha (shade (@fg_color, 1.55), 0.5);
+}
+.tweak-category:hover:selected {
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (shade (@selected_bg_color, 0.95), 0.90)),
+                                     to (shade (shade (@selected_bg_color, 0.95), 0.82)));
+
+    color: @selected_fg_color;
+    text-shadow: 0 -1px alpha (shade (@fg_color, 1.55), 0.5);
+}.
+

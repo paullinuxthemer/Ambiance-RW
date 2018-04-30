@@ -1,0 +1,5 @@
+@define-color bg_menu_row shade (@bg_color, 0.6);
+
+.boxes-menu-row > .dim-label {
+	color: shade (@bg_menu_row, 0.6);
+}
